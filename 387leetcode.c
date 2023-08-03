@@ -4,22 +4,30 @@
 
 int main (){
 
-    char palavra[100], arm[100];
-    int tamanho;
+    char palavra[100];
+    int tamanho, index = -1, j, count;
     printf("\nDigite a string: ");
     gets(palavra);
 
     tamanho = strlen(palavra);
 
-    for(int i=0; i<tamanho; i++){
-        arm[i] = 0;
-        for(int j=0; i<tamanho; i++){
-            if (palavra[i] == palavra[j+1]){
-                arm[i] = +1;
+    for(int i=0; i<tamanho-1; i++){
+        printf("%c = ", palavra[i]);
+        count = 0;
+        for(j=i+1; j<tamanho; j++){
+            printf("%c\n", palavra[j]);
+            if (palavra[i] == palavra[j]){
+                count++;
+                break;
+                
             }
 
         }
 
-        
+        if(count ==0){
+            index = i;
+            break;
+        }
     }
+    printf("\no indice e : %d", index);
 }

@@ -12,6 +12,6 @@
   <img align="center" alt="c" src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" />
 </div><br/>
 
-Cursando Ciência da computação, atualemte no 3º semestre.
+Cursando Ciência da computação, atualmente no 3º semestre.
 
 

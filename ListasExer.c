@@ -135,7 +135,7 @@ No *Inserir(No *raiz, int x)
 
 }
 
-No *Balncear(No *raiz)
+No *Balancear(No *raiz)
 {
     int fb = FB(raiz);
     //Rotação a esquerda
@@ -156,4 +156,20 @@ No *Balncear(No *raiz)
        raiz = RotacaoDirEsq(raiz);
     
     return raiz;
+}
+
+void Imprimir (No *raiz, int nivel)
+{
+    int i;
+    if(raiz != NULL)
+    {
+        Imprimir(raiz->dir, nivel + 1);
+        printf("/n/n");
+
+        for(i = 0; i< nivel; i++)
+           printf("/t");
+
+        printf("%d", raiz->valor);
+        Imprimir(raiz->esq, nivel +1);
+    }
 }

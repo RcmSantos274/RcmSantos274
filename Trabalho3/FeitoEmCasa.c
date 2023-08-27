@@ -150,7 +150,7 @@ void Imprimir(No *raiz, int nivel) {
     }
 }
 
-void encontrar_altura(No *raiz, int x, int nivel, int *altura) {
+void EncontrarAltura(No *raiz, int x, int nivel, int *altura) {
     if (raiz == NULL)
         return;
 
@@ -159,17 +159,17 @@ void encontrar_altura(No *raiz, int x, int nivel, int *altura) {
         return;
     }
 
-    encontrar_altura(raiz->esq, x, nivel + 1, altura);
-    encontrar_altura(raiz->dir, x, nivel + 1, altura);
+    EncontrarAltura(raiz->esq, x, nivel + 1, altura);
+    EncontrarAltura(raiz->dir, x, nivel + 1, altura);
 }
 
 // LCA da árvore binária
-No *ancestral_comum(No *raiz, int p, int q) {
+No *AncestralComum(No *raiz, int p, int q) {
     if (raiz == NULL || raiz->valor == p || raiz->valor == q)
         return raiz;
 
-    No *esq = ancestral_comum(raiz->esq, p, q);
-    No *dir = ancestral_comum(raiz->dir, p, q);
+    No *esq = AncestralComum(raiz->esq, p, q);
+    No *dir = AncestralComum(raiz->dir, p, q);
 
     if (esq == NULL)
         return dir;
@@ -179,16 +179,16 @@ No *ancestral_comum(No *raiz, int p, int q) {
         return raiz;
 }
 
-int sao_primos(No *raiz, int x, int y) {
+int SaoPrimos(No *raiz, int x, int y) {
     if (raiz == NULL)
         return 0;
 
     int altura_x, altura_y;
     int altura_ancestral = -1;
 
-    encontrar_altura(raiz, x, 0, &altura_x);
-    encontrar_altura(raiz, y, 0, &altura_y);
-    encontrar_altura(raiz, ancestral_comum(raiz, x, y)->valor, 0, &altura_ancestral);
+    EncontrarAltura(raiz, x, 0, &altura_x);
+    EncontrarAltura(raiz, y, 0, &altura_y);
+    EncontrarAltura(raiz, AncestralComum(raiz, x, y)->valor, 0, &altura_ancestral);
 
     if (altura_x == altura_y && abs(altura_x - altura_ancestral) > 1)
         return 1;
@@ -202,7 +202,7 @@ int main() {
 
     do {
         printf("\n ----- Menu -------\n");
-        printf("1 - Insere\n2 - Imprime\n3 - Verifica Primo    4 - Sair\n");
+        printf("1 - Insere\n2 - Imprime\n3 - Verifica Primo\n4 - Sair\n");
         scanf("%d", &opcao);
 
         switch (opcao) {
@@ -221,7 +221,7 @@ int main() {
             printf("Digite os valores dos nos: ");
             scanf("%d %d", &valor1, &valor2);
 
-            if (sao_primos(no, valor1, valor2)) {
+            if (SaoPrimos(no, valor1, valor2)) {
                 printf("Os nos %d e %d sao primos.\n", valor1, valor2);
             } else {
                 printf("Os nos %d e %d nao sao primos.\n", valor1, valor2);

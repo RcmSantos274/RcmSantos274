@@ -18,10 +18,10 @@ int main() {
 
         for (int i = 0; i < v; i++) {
             for (int j = 0; j < v; j++) {
-                if (i != j) {
-                    printf("\nDigite a kilometragem da cidade %s para a cidade %s: ", name[i], name[j]);
-                    scanf("%d", &m[i][j]);
-                }
+                 
+                printf("\nDigite a kilometragem da cidade %s para a cidade %s: ", name[i], name[j]);
+                scanf("%d", &m[i][j]);
+                
             }
         }
 
@@ -37,34 +37,38 @@ int main() {
 
         for(int x=0; x<v; x++){
            for(int w=0; w<v; w++){
-              if( m[x][w]!= 999 && m[x][w] != 0){
-                mfinal[w][0] = 0;
-                mfinal[w][1] = name[x];
-                mfinal[w][2] = m[x][w];
+              if( m[x][w]!= 999 && m[x][w] != 0 && mfinal[w][0] != 1){
+                if(mfinal[x][2]+m[x][w] < mfinal[w][2]){ 
+                   mfinal[w][0] = 0;
+                   mfinal[w][1] = name[x];
+                   mfinal[w][2] = m[x][w]+mfinal[x][2];
+                }
+                else{
+                    mfinal[w][0] = 0;
+                    mfinal[w][1] = name[x];
+                    mfinal[w][2] = m[x][w];
+                }
               }
               else if(m[x][w] = 0){
                 mfinal[w][0] = 1;
                 mfinal[w][1] = name[x];
                 mfinal[w][2] = m[x][w];
               }
-                
-
             }
-               
-
+            //mfinal[x][0] = 1;
         }
-    }
+
+        for (int d = 0; d < v; d++) {
+            printf("Matriz final de %s \nFechada: %d\nAntdescente: %d\n Peso: %d",name[d], mfinal[d][0], mfinal[d][1], mfinal[d][2]);
+            
+        }
 
 
-    } else {
+
+
+    }else {
         printf("\nAs vertices tem que ser positivas");
     }
-
-    
-
-
-
-    
 
     return 0;
 }

@@ -27,18 +27,44 @@ int main() {
 
         for (int s = 0; s < v; s++) {
             for (int l = 0; l < v; l++) {
-                if (s != l && m[s][l]!= 0) {
+                if (s != l && m[s][l]!= 999) {
                     printf("\nA kilometragem da cidade %s para a cidade %s e: %d", name[s], name[l], m[s][l]);
                 }
             }
         }
+        
+        int mfinal[v][3];
+
+        for(int x=0; x<v; x++){
+           for(int w=0; w<v; w++){
+              if( m[x][w]!= 999 && m[x][w] != 0){
+                mfinal[w][0] = 0;
+                mfinal[w][1] = name[x];
+                mfinal[w][2] = m[x][w];
+              }
+              else if(m[x][w] = 0){
+                mfinal[w][0] = 1;
+                mfinal[w][1] = name[x];
+                mfinal[w][2] = m[x][w];
+              }
+                
+
+            }
+               
+
+        }
+    }
 
 
     } else {
         printf("\nAs vertices tem que ser positivas");
     }
 
-    for (int )
+    
+
+
+
+    
 
     return 0;
 }

@@ -1,0 +1,40 @@
+Definir a melhor rota de fuga para que está na sala da Empresa Júnior, usando os seguintes algoritmos:
+a)Depth-first search (Busca em profundidade);
+Empresa Jr --> CIRC23 --> CIRC22 --> CIRC21 --> CIRC20 --> Saida porta de fogo (Goal)
+Path to last Goal Node: Empresa Jr --> CIRC23 --> CIRC22 --> CIRC21 --> CIRC20 --> Saida porta de 
+fogo (Goal) 
+Cost: 10.5
+Nodes expanded: 6
+
+b)Breadth-first search (Busca em largura/amplitude);
+Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal)
+Path to last Goal Node: Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal) 
+Cost: 9.0
+Nodes expanded: 10
+
+c)Lowest cost search (Busca pelo menor custo/custo uniforme );
+Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal)
+Path to last Goal Node: Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal)
+Cost: 9.0
+Nodes expanded: 10
+
+d)Best first search (Busca pela melhor escolha); 
+Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal)
+Path to last Goal Node: Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal) 
+Cost: 9.0
+Nodes expanded: 8
+
+e)Heuristic depth search;
+Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal)
+Path to last Goal Node: Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal) 
+Cost: 9.0
+Nodes expanded: 7
+
+f)A*;
+Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal)
+Path to last Goal Node: Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal) 
+Cost: 9.0 
+Nodes expanded: 9
+
+
+Definir a melhor rota com o nodo de partida FERRUGEM e o de chegada NCR:

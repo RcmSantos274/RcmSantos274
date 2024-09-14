@@ -1,40 +1,91 @@
-Definir a melhor rota de fuga para que está na sala da Empresa Júnior, usando os seguintes algoritmos:
-a)Depth-first search (Busca em profundidade);
-Empresa Jr --> CIRC23 --> CIRC22 --> CIRC21 --> CIRC20 --> Saida porta de fogo (Goal)
-Path to last Goal Node: Empresa Jr --> CIRC23 --> CIRC22 --> CIRC21 --> CIRC20 --> Saida porta de 
-fogo (Goal) 
-Cost: 10.5
-Nodes expanded: 6
+1) Defina a melhor rota de fuga para que está na sala de monitoria do Lab 5, usando os
+seguintes algoritmos:
 
-b)Breadth-first search (Busca em largura/amplitude);
-Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal)
-Path to last Goal Node: Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal) 
-Cost: 9.0
-Nodes expanded: 10
+a) Depth-first search (Busca em profundidade);
+LAB5 --> CIRC10 --> CIRC11 --> CIRC12--> CIRC13--> CIRC14--> ESCADA EST(Goal)
+Path cost: 10.0
+Nodes expanded : 7
 
-c)Lowest cost search (Busca pelo menor custo/custo uniforme );
-Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal)
-Path to last Goal Node: Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal)
-Cost: 9.0
-Nodes expanded: 10
-
-d)Best first search (Busca pela melhor escolha); 
-Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal)
-Path to last Goal Node: Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal) 
-Cost: 9.0
-Nodes expanded: 8
-
-e)Heuristic depth search;
-Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal)
-Path to last Goal Node: Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal) 
-Cost: 9.0
-Nodes expanded: 7
-
-f)A*;
-Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal)
-Path to last Goal Node: Empresa Jr --> CIRC23 --> CIRC24 --> CIRC25 --> Escada int (Goal) 
-Cost: 9.0 
-Nodes expanded: 9
+b) Breadth-first search (Busca em largura/amplitude);
+LAB5 --> CIRC10 --> CIRC11 --> CIRC12--> CIRC13--> CIRC14--> ESCADA EST(Goal)
+Path cost: 10.0
+Nodes expanded : 26
 
 
-Definir a melhor rota com o nodo de partida FERRUGEM e o de chegada NCR:
+c) Lowest cost search (Busca pelo menor custo/custo uniforme );
+LAB5 --> CIRC10 --> CIRC11 --> CIRC12--> CIRC13--> CIRC14--> ESCADA EST(Goal)
+Path cost: 10.0
+Nodes expanded : 31
+
+d) Best first search (Busca pela melhor escolha);
+LAB5 --> CIRC10 --> CIRC9 --> CIRC8--> CIRC7--> CIRC6--> CIRC4 --> Circ 2 --> Circ1 --> ESCADA INT(Goal)
+Path cost: 15.0
+Nodes expanded : 18
+
+e) Heuristic depth search ;
+LAB5 --> CIRC10 --> CIRC9 --> CIRC8--> CIRC7--> CIRC6--> CIRC4 --> Circ 2 --> Circ1 --> ESCADA INT(Goal)
+Path cost: 15.0
+Nodes expanded : 13
+
+f) A*.
+LAB5 --> CIRC10 --> CIRC9 --> CIRC8--> CIRC7--> CIRC6--> CIRC4 --> Circ 2 --> Circ1 --> ESCADA INT(Goal)
+Path cost: 15.0
+Nodes expanded : 32
+
+A melhor escolha é a Depth pois apresenta menor custo e passando por menos lugares
+
+---------------------------------------------------------------------------------------
+
+1) Considerando o nodo de partida PET e o de chegada NCR;
+ Explique:
+As diferenças entre as técnicas existentes no software:
+
+a) Depth-first search (Busca em profundidade);
+PET--> DA--> CIRC14--> CIRC13--> CIRC12--> CIRC15--> CIRC16--> CIRC17--> CIRC18--> CIRC19--> CIRC20--> CIRC21--> CIRC22--> CIRC23--> Empresa Jr --> NCR1 --> NCR(Goal)
+Path cost: 24.0
+Nodes expanded : 26
+
+b) Breadth-first search (Busca em largura/amplitude);
+PET--> DA--> CIRC14--> CIRC13--> CIRC12--> CIRC15--> CIRC16--> CIRC17--> CIRC18--> CIRC19--> CIRC20--> CIRC21--> CIRC22--> CIRC23--> Empresa Jr --> NCR1 --> NCR(Goal)
+Path cost: 24.0
+Nodes expanded : 64
+
+c) Lowest cost search (Busca pelo menor custo/custo uniforme );
+PET--> DA--> CIRC14--> CIRC13--> CIRC12--> CIRC15--> CIRC16--> CIRC17--> CIRC18--> CIRC19--> CIRC20--> CIRC21--> CIRC22--> CIRC23--> Empresa Jr --> NCR1 --> NCR(Goal)
+Path cost: 24.0
+Nodes expanded : 61
+
+d) Best first search (Busca pela melhor escolha);
+PET--> DA--> CIRC14--> CIRC13--> CIRC12--> CIRC15--> CIRC16--> CIRC17--> CIRC18--> CIRC19--> CIRC20--> CIRC21--> CIRC22--> CIRC23--> Empresa Jr --> NCR1 --> NCR(Goal)
+Path cost: 24.0
+Nodes expanded : 49
+
+e) Heuristic depth search ;
+PET--> DA--> CIRC14--> CIRC13--> CIRC12--> CIRC15--> CIRC16--> CIRC17--> CIRC18--> CIRC19--> CIRC20--> CIRC21--> CIRC22--> CIRC23--> Empresa Jr --> NCR1 --> NCR(Goal)
+Path cost: 24.0
+Nodes expanded : 49
+
+f) A*.
+PET--> DA--> CIRC14--> CIRC13--> CIRC12--> CIRC15--> CIRC16--> CIRC17--> CIRC18--> CIRC19--> CIRC20--> CIRC21--> CIRC22--> CIRC23--> Empresa Jr --> NCR1 --> NCR(Goal)
+Path cost: 24.0
+Nodes expanded : 48
+
+Qual algoritmo apresentou maior explosão combinacional?
+A busca em largura (64 nós expandidos).
+
+Qual algoritmo apresentou melhor desempenho?
+A* (48 nós expandidos).
+
+Houve algum problema para achar a resposta?
+Não, todos os algoritmos encontraram o caminho com o mesmo custo.
+
+Diferença ao usar detecção de ciclos?
+Evita que algoritmos explorem nós repetidos, melhorando tempo e espaço de busca, especialmente em grafos com ciclos.
+
+
+
+
+
+
+
+
